@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Modern Art Generator</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div id="toolpanel">
+            <h2>Modern Art Generator</h2>
+            <p>There's probably an actual name for this kind of art but I don't know what it is</p>
+            <hr>
+                <b>Load image from: </b>
+                <select id='img-method'>
+                    <option value="file">File Upload</option>
+                    <option value = "url">URL (not all URL's work for some reason)</option>
+                    <option value = "camera">Camera</option>
+                </select>
+            <br><br>
+                <input id="fileinput" type="file">
+                <input id = "url" type = "url" style = "width: 90%; display: none">
+                <div id="camera-controls" style="display:none">
+                    <button onclick="start_camera(this);">Start Camera</button> <button onclick="take_picture(this);">Take Picture</button>
+                    <button onclick = "stop_camera(this);">Stop Camera</button>
+                    <video id="camera-preview" style = "background-color: grey; width: 90%;" autoplay></canvas>
+                </div>
+            <hr>
+                <p style = "color:darkred">Don't use this website if you are sensitive to flashing colors or images</p>
+            <hr>
+                <p>This may not work well for images that have very fine details</p>
+            <hr>
+                <p>This will probably look really bad on mobile devices</p>
+            <hr>
+                <!--<b>Number of shapes:</b>
+                <input type="number" id="shapes" value = 100>
+            <hr>
+                <b>Shape size multiplier: </b><input id = "shapeSize" type="number" value = 1 step = 0.1><br> 
+                <input style="width:90%" type = "range">
+            <hr>-->
+                <progress id = "progress" max = "100" style = "width: 90%" value = 0></progress><br>
+                <button style="width: 90%;" onclick = "test_shape()">Turn into modern art</button><br>
+                <p><a href="#" download = "Modern Art.jpg">Download result as .jpg</a>, or right click on the image to the right to have the option to copy it</p>
+        </div>
+        <div id="art-container">
+            <canvas id="output-canvas" style = "background: grey; width: 75%;"></canvas>
+            <canvas id="hidden_canvas" style = "background: blue; display:none;"></canvas>
+        </div>
+
+    </body>
+</html>
