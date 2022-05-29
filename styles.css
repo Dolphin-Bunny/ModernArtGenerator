@@ -1,0 +1,24 @@
+#toolpanel {
+    background-color: whitesmoke;
+    position:absolute;
+    left:0px;
+    top: 0px;
+    bottom:0px;
+    right: 80%;
+    padding: 5px;
+}
+
+#art-container {
+    background-color:white;
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 20%;
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
